@@ -11,4 +11,7 @@ if [ "$brewbin" != "" ];then
 	brew install bash-completion
 fi
 
+# 注意有些文件不能直接拷贝, 比如 .bash_profile
 cp -f $base_dir/.gitconfig $HOME/
+cp -f $base_dir/.git-completion.bash $HOME/
+cat .bash_profile >> $HOME/.bash_profile
