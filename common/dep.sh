@@ -5,4 +5,10 @@ if [ "$yumbin" != "" ];then
 	sudo yum install bash_completion*
 fi
 
+brewbin=`which brew`
+
+if [ "$brewbin" != "" ];then
+	brew install bash-completion
+fi
+
 cp -f $base_dir/.gitconfig $HOME/
