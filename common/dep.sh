@@ -2,13 +2,13 @@
 base_dir=$(cd "$(dirname "$0")";pwd)
 yumbin=`which yum`
 if [ "$yumbin" != "" ];then
-	sudo yum install bash_completion* jq
+	sudo yum install bash_completion* jq lrzsz
 fi
 
 brewbin=`which brew`
 
 if [ "$brewbin" != "" ];then
-	brew install bash-completion jq
+	brew install bash-completion jq lrzsz
 fi
 
 # 注意有些文件不能直接拷贝, 比如 .bash_profile
